@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test_apps/data/constants.dart';
 import 'package:test_apps/views/pages/course_page.dart';
-import 'package:test_apps/views/pages/expanded_flexible_page.dart';
 import 'package:test_apps/views/widgets/container_widget.dart';
 import 'package:test_apps/views/widgets/hero_widget.dart';
 
@@ -29,12 +28,10 @@ class HomePage extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => ExpandedFlexiblePage(),
-                  ),
+                  MaterialPageRoute(builder: (context) => CoursePage()),
                 );
               },
-              child: Text("Expanded Page"),
+              child: Text("Course Page"),
             ),
             // this how you add many widget in flutter #1
             ...List.generate(listData.length, (index) {
